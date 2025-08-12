@@ -1,6 +1,5 @@
 import subprocess, json, sys, re, platform, time, os, argparse
 
-
 def args():
     parser = argparse.ArgumentParser(description="JONAS WHOIS")
     # group = parser.add_mutually_exclusive_group()
@@ -56,7 +55,6 @@ def jonas(domain_name, output_file):
                 pass
         else:
             print(json.dumps(report, indent=3))
-
 
     else: 
         print("[-] Invalid Domain\n")
