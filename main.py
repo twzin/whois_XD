@@ -66,7 +66,6 @@ def jonas(domain_name, output_file):
 if __name__ == "__main__":
     args = args()
 
-
     if not args.domain:
         sys.exit(1)
     jonas(args.domain, args.output)
