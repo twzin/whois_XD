@@ -1,12 +1,12 @@
 import subprocess, json, sys, re, platform, time, os, argparse
 
 def args():
-    parser = argparse.ArgumentParser(description="JONAS WHOIS")
+    parser = argparse.ArgumentParser(description="WHOIS")
     parser.add_argument('-d', '--domain', type=str, help='Domain to whois')
     parser.add_argument('-o', '--output', type=str, default=None, help='Output file')
     return parser.parse_args()
 
-def jonas(domain_name, output_file):
+def whois(domain_name, output_file):
 
     if platform.system() == "Windows":
         time.sleep(2)
@@ -64,4 +64,4 @@ if __name__ == "__main__":
 
     if not args.domain:
         sys.exit(1)
-    jonas(args.domain, args.output)
+    whois(args.domain, args.output)
